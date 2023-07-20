@@ -4,7 +4,6 @@ module MyEnumerable
     true
   end
 
-
   def any?
     each { |item| return true if yield(item) }
     false
@@ -12,8 +11,7 @@ module MyEnumerable
 
   def filter(&block)
     filtered_array = []
-    each {|element| filtered_array << element if block.call(element)}
+    each { |element| filtered_array << element if block.call(element) }
     filtered_array
   end
-
 end

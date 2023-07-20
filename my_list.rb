@@ -19,4 +19,4 @@ p(list.all? { |e| e == 2 })
 p(list.any? { |e| e == 2 })
 p(list.any? { |e| e == 5 })
 
-p(list.filter {|e| e.even?})
+p(list.filter(&:even?))
